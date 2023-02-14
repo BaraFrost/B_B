@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Player : MonoBehaviour
 {
@@ -57,6 +59,10 @@ public class Player : MonoBehaviour
         else if(facingRight && moveInput.x < 0)
         {
             Flip();
+        }
+        if(health <=0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 

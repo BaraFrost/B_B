@@ -10,7 +10,7 @@ public class Bullet : MonoBehaviour {
     public int damage;
     public LayerMask whatIsSolid;
 
-   
+    [SerializeField] bool enemyBullet;
 
     private void Start()
     {
@@ -26,6 +26,11 @@ public class Bullet : MonoBehaviour {
             {
                 
                 hitInfo.collider.GetComponent<Enemy>().TakeDamage(damage);
+            }
+            if (hitInfo.collider.CompareTag("Player") && enemyBullet)
+            {
+
+                hitInfo.collider.GetComponent<Player>().ChangeHealth(-damage);
             }
             DestroyProjectile();
         }

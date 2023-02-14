@@ -98,8 +98,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9225472ab52628d4987d2c54e86bb9a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gunType: 0
   offset: 0
   bullet: {fileID: 6091304055845160946, guid: ce454e51dccc19a42a207bcd2d48725b, type: 3}
+  joystick: {fileID: 0}
   shotPoint: {fileID: 258383325261495216}
   startTimeBtwShots: 0.1
 --- !u!1 &258383323989298310
