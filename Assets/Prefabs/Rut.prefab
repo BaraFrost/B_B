@@ -268,6 +268,7 @@ GameObject:
   - component: {fileID: 3045008078570979859}
   - component: {fileID: 3045008078570979858}
   - component: {fileID: 3045008078570979856}
+  - component: {fileID: -2742804526615193463}
   m_Layer: 8
   m_Name: Rut
   m_TagString: Enemy
@@ -341,12 +342,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6242b9a24da46ac46b1a656b5b78e4af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
+  health: 2
   normalSpeed: 25
   startStopTime: 0.8
   timeBtwAttack: 1
-  damage: 2
+  damage: 1
   startTimeBtwAttack: 1
+--- !u!58 &-2742804526615193463
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3045008078570979852}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -4.608394, y: -0.6972122}
+  serializedVersion: 2
+  m_Radius: 3.8670201
 --- !u!1 &3045008078587500889
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-
+    
     private Player player;
     public int health;
-    private float tomeBtwAttack;
+   // private float tomeBtwAttack;
     private float stopTime;
     private Animator anim;
     private float speed;
@@ -26,6 +26,7 @@ public class Enemy : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         player = FindObjectOfType<Player>();
+        normalSpeed = speed;
 
     }
 
@@ -71,7 +72,7 @@ public class Enemy : MonoBehaviour
         {
             if (timeBtwAttack <= 0)
             {
-                anim.SetTrigger("enemyAttack");
+                //anim.SetTrigger("EnemyAttack");
             }
             else
             {
@@ -81,7 +82,7 @@ public class Enemy : MonoBehaviour
     }
     public void OnEnemyAttack()
     {
-        player.ChangeHealth(-damage);
+        player.health -= damage;
         timeBtwAttack = startTimeBtwAttack;
     }
 }
